@@ -4,15 +4,21 @@ using UnityEngine;
 
 public class EnemyMove : MonoBehaviour
 {
+    public Transform target;
+
+    public float speed;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        transform.position = new Vector3(2, 0, 0);
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        float step = speed * Time.deltaTime;
+
+        transform.position = Vector3.MoveTowards(transform.position, target.position, step);
     }
 }
