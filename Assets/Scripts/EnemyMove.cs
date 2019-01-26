@@ -8,6 +8,8 @@ public class EnemyMove : MonoBehaviour
 
     public float speed;
 
+    public int demage;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -20,5 +22,13 @@ public class EnemyMove : MonoBehaviour
         float step = speed * Time.deltaTime;
 
         transform.position = Vector3.MoveTowards(transform.position, target.position, step);
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if( collision.gameObject.tag == "player" )
+        {
+            Player.hp -= demage;
+        }
     }
 }

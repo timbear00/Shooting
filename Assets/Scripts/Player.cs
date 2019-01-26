@@ -18,15 +18,7 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        playerHp.text = "HP : " + hp;
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if( collision.gameObject.tag == "enemy" )
-        {
-            hp -= 5;
-            playerHp.text = "HP : " + hp;
-        }
-    }
 }
