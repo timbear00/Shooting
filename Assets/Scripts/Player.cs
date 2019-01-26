@@ -15,10 +15,18 @@ public class Player : MonoBehaviour
         playerHp.text = "HP : " + hp;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void FixedUpdate()
     {
         playerHp.text = "HP : " + hp;
+        PlayerDie();
+    }   
+    
+    private void PlayerDie()
+    {
+        if (hp < 0)
+        {
+            this.gameObject.active = false;
+        }
     }
 
 }
