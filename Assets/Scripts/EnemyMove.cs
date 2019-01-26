@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyMove : MonoBehaviour
 {
-    public Transform target;
+    private Transform target;
 
     public float speed;
     public float enemyHp;
@@ -14,7 +14,8 @@ public class EnemyMove : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        transform.position = new Vector3(0, -5, 0);
+        
+        target = GameObject.FindGameObjectWithTag("player").GetComponent<Transform>();
     }
 
     // Update is called once per frame
