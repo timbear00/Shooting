@@ -23,7 +23,7 @@ public class Player : MonoBehaviour
     
     private void PlayerDie()
     {
-        if (hp < 0)
+        if (hp < 1)
         {
             this.gameObject.active = false;
         }
