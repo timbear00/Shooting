@@ -32,4 +32,5 @@ public class EnemyMove : MonoBehaviour
             Player.hp -= demage;
         }
     }
+
 }
