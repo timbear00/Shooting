@@ -7,7 +7,7 @@ public class EnemyMove : MonoBehaviour
     public Transform target;
 
     public float speed;
-
+    public float enemyHp;
     public int demage;
 
     // Start is called before the first frame update
