@@ -10,10 +10,11 @@ public class EnemyMove : MonoBehaviour
     public float enemyHp;
     public int demage;
 
+
     // Start is called before the first frame update
     void Start()
     {
-        transform.position = new Vector3(2, 0, 0);
+        transform.position = new Vector3(0, -5, 0);
     }
 
     // Update is called once per frame
