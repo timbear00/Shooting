@@ -19,9 +19,9 @@ public class PlayerController : MonoBehaviour
     {
         if( Input.GetMouseButtonDown(0) )
         {
-            Debug.Log("Gun");
-            Instantiate(bullet, GunPosition.position, bullet.transform.rotation);
+            GameObject instantiatedProjectile = Instantiate(bullet, GunPosition.position, bullet.transform.rotation);
+
+            Object.Destroy(instantiatedProjectile, 2.0f);
         }
     }
-
 }
