@@ -138,20 +138,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 4526774655465439851, guid: 6f5c31396a5de014f971f8d806f497a3, type: 3}
   GunPosition: {fileID: 1491831578}
---- !u!114 &549015560
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 549015552}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9e76600dd3fd7674d94165965fa3e4ce, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemy1: {fileID: 1924948385525515304, guid: e99b56635cba46f4a9f5c53af7d18711, type: 3}
-  enemy2: {fileID: 8607519628051174185, guid: d176c7571afa78d45a2475af1d7cd84c, type: 3}
 --- !u!1001 &922014745
 PrefabInstance:
   m_ObjectHideFlags: 0
