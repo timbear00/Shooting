@@ -9,7 +9,8 @@ public class GameManager : MonoBehaviour
     public GameObject enemy2;
 
     public Text nameText;
-    public Transform canvas;
+    public Slider HealthBar;
+    public Text hpText;
 
     public GameObject jack;
     public GameObject jessica;
@@ -34,6 +35,8 @@ public class GameManager : MonoBehaviour
         }
 
         nameText.text = "Name : " + SceneChange.name;
+        HealthBar.value = Player.hp;
+        hpText.text = Player.hp + "/100";
     }
 
     // Update is called once per frame
@@ -57,6 +60,9 @@ public class GameManager : MonoBehaviour
             timeLeft = 3.0f;
 
         }
+
+        HealthBar.value = Player.hp;
+        hpText.text = Player.hp + "/100";
     }
     
 }
