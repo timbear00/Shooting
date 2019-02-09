@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1868348279}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.24, y: -1.18, z: 0}
+  m_LocalPosition: {x: 4.88, y: -1.18, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1928774952}
@@ -141,10 +141,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hpSetting: 100
-  attackDamage: 10
-  attackSpeed: 3
-  playerHp: {fileID: 3913477516022251137, guid: 6732b2aa05d094d4f81b08b2d680fb76,
-    type: 3}
 --- !u!114 &1928774948
 MonoBehaviour:
   m_ObjectHideFlags: 0
