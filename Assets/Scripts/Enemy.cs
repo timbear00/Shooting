@@ -19,7 +19,7 @@ public class Enemy : MonoBehaviour
     {
         enemyDead = false;
         enemyHit = false;
-        if (!Player.playerdead)
+        if (!Player.playerdead) 
             target = GameObject.FindGameObjectWithTag("player").GetComponent<Transform>();
     }
 
@@ -29,9 +29,14 @@ public class Enemy : MonoBehaviour
         float step = speed * Time.deltaTime;
 
         if (!Player.playerdead)
+        {
             transform.position = Vector3.MoveTowards(transform.position, target.position, step);
 
-        if(enemyHit)
+            if (gameObject.transform.position.x - target.transform.position.x > 0)
+                gameObject.GetComponent<SpriteRenderer>().flipX = true;
+        }
+
+        if (enemyHit)
         {
             enemyHp -= Player.attackDamage;
             enemyHit = false;
