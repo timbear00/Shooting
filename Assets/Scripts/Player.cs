@@ -8,6 +8,7 @@ public class Player : MonoBehaviour
     public int hpSetting;
     public static float attackDamage;
     public static float attackSpeed;
+    public static string playerName;
 
     public static bool playerdead;
     public static int hp;  
@@ -15,13 +16,17 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
         hp = hpSetting;
         playerdead = false;
+        gameObject.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>(playerName);
+        
+
     }
 
     void Update()
     {
-        Debug.Log(hp);
+        //Debug.Log(hp);
         PlayerDie();
     }   
     
