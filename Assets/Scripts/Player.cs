@@ -6,8 +6,8 @@ using UnityEngine.UI;
 public class Player : MonoBehaviour
 {
     public int hpSetting;
-    public float attackDamage;
-    public float attackSpeed;
+    public static float attackDamage;
+    public static float attackSpeed;
 
     public static bool playerdead;
     public static int hp;  

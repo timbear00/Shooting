@@ -11,12 +11,15 @@ public class SceneChange : MonoBehaviour
     {
         SceneManager.LoadScene("GJ_test");
         name = "Jack";
+        Player.attackDamage = 10;
     }
 
     public void Jessica()
     {
         SceneManager.LoadScene("GJ_test");
         name = "Jessica";
+        Player.attackDamage = 10;
+
     }
 
     // Start is called before the first frame update

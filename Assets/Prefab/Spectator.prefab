@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1924948385525515309}
   - component: {fileID: 1924948385525515308}
   - component: {fileID: 1924948385525515311}
+  - component: {fileID: 5523986549601517434}
   m_Layer: 0
   m_Name: Spectator
   m_TagString: enemy
@@ -94,7 +95,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b46b1eaf4d81f34a800c6cacd23a20f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
   speed: 1
   enemyHp: 0
   demage: 5
@@ -145,3 +145,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &5523986549601517434
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1924948385525515304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59424a533ff7082409663d95d2bc5788, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1
+  enemyHp: 10
+  demage: 5
+  enemyDead: 0

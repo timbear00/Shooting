@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyMove : MonoBehaviour
+public class Enemy : MonoBehaviour
 {
     private Transform target;
 
@@ -10,12 +10,15 @@ public class EnemyMove : MonoBehaviour
     public float enemyHp;
     public int demage;
 
+    public bool enemyDead;
+
 
     // Start is called before the first frame update
     void Start()
     {
-        if(!Player.playerdead)
-        target = GameObject.FindGameObjectWithTag("player").GetComponent<Transform>();
+        enemyDead = false;
+        if (!Player.playerdead)
+            target = GameObject.FindGameObjectWithTag("player").GetComponent<Transform>();
     }
 
     // Update is called once per frame
@@ -26,21 +29,30 @@ public class EnemyMove : MonoBehaviour
         if (!Player.playerdead)
             transform.position = Vector3.MoveTowards(transform.position, target.position, step);
 
+        Enemydead();
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if( collision.gameObject.tag == "player" )
+        if (collision.gameObject.tag == "player")
         {
             Player.hp -= demage;
-            
+
         }
 
-        if(collision.gameObject.tag == "Bullet")
+        else if (collision.gameObject.tag == "Bullet")
         {
+            Debug.Log("hit!");
             enemyHp -= Player.attackDamage;
         }
-
     }
 
+    private void Enemydead()
+    {
+        if(enemyHp <= 0)
+        {
+            enemyDead = true;
+            Destroy(gameObject);
+        }
+    }
 }
