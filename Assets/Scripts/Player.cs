@@ -12,6 +12,7 @@ public class Player : MonoBehaviour
     public static float playerSpeed;
 
     public static bool playerdead;
+    public static bool playerClear;
     public static int hp;  
 
     // Start is called before the first frame update

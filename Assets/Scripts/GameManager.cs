@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+
 
 public class GameManager : MonoBehaviour
 {
@@ -16,35 +18,47 @@ public class GameManager : MonoBehaviour
     public Text hpText;
     public Text timeTable;
 
+    public GameObject clearPanel;
+
     public float LastTime;
 
     private float timeLeft = 1.0f;
     private int spawnNum = 0;
+    private GameObject player;
 
     // Start is called before the first frame update
     private void Awake()
     {
-        LastTime = 180;
+        LastTime = 10;
+        Player.playerClear = false;
 
         if (Player.playerName == "Jack")
         {
-            GameObject player = Instantiate<GameObject>(Jack);
+            player = Instantiate<GameObject>(Jack);
         }
         else
         {
-            Instantiate<GameObject>(Jessica);
+            player = Instantiate<GameObject>(Jessica);
         }
 
         nameText.text = "Name : " + Player.playerName;
         HealthBar.value = Player.hp;
         hpText.text = Player.hp + "/100";
+
+        clearPanel.SetActive(false);
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
+
         LastTime -= Time.deltaTime;
-        timeTable.text = "남은 시간 : " + LastTime.ToString();
+
+        if(LastTime > 0)
+            timeTable.text = "남은 시간 : " + LastTime.ToString();
+
+        else
+            timeTable.text = "남은 시간 : " + 0;
 
         timeLeft -= Time.deltaTime;
         if( timeLeft <= 0 )
@@ -56,6 +70,23 @@ public class GameManager : MonoBehaviour
 
         HealthBar.value = Player.hp;
         hpText.text = Player.hp + "/100";
+
+        Clear();
     }
     
+    void GameOver()
+    {
+
+    }
+
+    void Clear()
+    {
+        if (LastTime <= 0)
+        {
+            player.SetActive(false);
+            clearPanel.SetActive(true);
+            Player.playerClear = true;
+        }
+            
+    }
 }

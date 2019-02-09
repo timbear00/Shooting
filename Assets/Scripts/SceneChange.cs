@@ -27,15 +27,19 @@ public class SceneChange : MonoBehaviour
 
     }
 
-    // Start is called before the first frame update
-    void Start()
+    public void GoToStage2()
     {
-        
+        SceneManager.LoadScene("Stage2");
     }
 
-    // Update is called once per frame
-    void Update()
+    public void GoToBossStage()
     {
-        
+        SceneManager.LoadScene("Boss");
     }
+
+    public void GoToMain()
+    {
+        SceneManager.LoadScene("Main");
+    }
+ 
 }
