@@ -7,6 +7,9 @@ public class GameManager : MonoBehaviour
     public GameObject enemy1;
     public GameObject enemy2;
 
+    public GameObject HpText;
+    public Transform canvas;
+
     float timeLeft = 1.0f;
 
     bool up;
@@ -15,6 +18,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         up = true;
+        Instantiate(HpText, canvas);
     }
 
     // Update is called once per frame
@@ -37,4 +41,5 @@ public class GameManager : MonoBehaviour
 
         }
     }
+    
 }

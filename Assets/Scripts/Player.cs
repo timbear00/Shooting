@@ -5,13 +5,18 @@ using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
-    public static int hp = 100;
+    public int hpSetting;
+    public float attackDamage;
+    public float attackSpeed;
 
-    public Text playerHp;
+    public static int hp;
+
+    public Text playerHp;  
 
     // Start is called before the first frame update
     void Start()
     {
+        hp = hpSetting;
         playerHp.text = "HP : " + hp;
     }
 
