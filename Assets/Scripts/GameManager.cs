@@ -25,16 +25,6 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         up = true;
-        /*
-        if(SceneChange.playerName == "Jack")
-        {
-            Instantiate(jack, new Vector3(0, 0, 0), transform.rotation );
-        }
-        else if(SceneChange.playerName == "Jessica")
-        {
-            Instantiate(jessica, new Vector3(0, 0, 0), transform.rotation);
-        }*/
-
         nameText.text = "Name : " + Player.playerName;
         HealthBar.value = Player.hp;
         hpText.text = Player.hp + "/100";
