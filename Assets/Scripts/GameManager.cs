@@ -17,8 +17,10 @@ public class GameManager : MonoBehaviour
     public Slider HealthBar;
     public Text hpText;
     public Text timeTable;
+    public string stageName;
 
     public GameObject clearPanel;
+    public GameObject MenuPanel;
 
     public float LastTime;
 
@@ -29,8 +31,8 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     private void Awake()
     {
-        LastTime = 10;
         Player.playerClear = false;
+        Variables.currentScene = stageName;
 
         if (Player.playerName == "Jack")
         {
@@ -46,6 +48,7 @@ public class GameManager : MonoBehaviour
         hpText.text = Player.hp + "/100";
 
         clearPanel.SetActive(false);
+        MenuPanel.SetActive(false);
     }
 
     // Update is called once per frame
@@ -53,6 +56,12 @@ public class GameManager : MonoBehaviour
     {
 
         LastTime -= Time.deltaTime;
+
+        if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            MenuPanel.SetActive(true);
+            Time.timeScale = 0;
+        }
 
         if(LastTime > 0)
             timeTable.text = "남은 시간 : " + LastTime.ToString();
@@ -81,12 +90,16 @@ public class GameManager : MonoBehaviour
 
     void Clear()
     {
-        if (LastTime <= 0)
+        if (LastTime <= 0 && stageName != "Boss")
         {
             player.SetActive(false);
             clearPanel.SetActive(true);
             Player.playerClear = true;
         }
-            
+
+        else
+        {
+
+        }
     }
 }

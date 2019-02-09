@@ -6,9 +6,11 @@ using UnityEngine.UI;
 
 public class SceneChange : MonoBehaviour
 {
+    public GameObject panel;
+
     public void Jack()
     {
-        SceneManager.LoadScene("1stMap");
+        SceneManager.LoadScene("Stage1");
         Player.playerName = "Jack";
         Player.attackDamage = 20;
         Player.attackSpeed = 0.8f;
@@ -18,7 +20,7 @@ public class SceneChange : MonoBehaviour
 
     public void Jessica()
     {
-        SceneManager.LoadScene("1stMap");
+        SceneManager.LoadScene("Stage1");
         Player.playerName = "Jessica";
         Player.attackDamage = 10;
         Player.attackSpeed = 0.3f;
@@ -41,5 +43,24 @@ public class SceneChange : MonoBehaviour
     {
         SceneManager.LoadScene("Main");
     }
+
+    public void ContinueGame()
+    {
+        Time.timeScale = 1;
+        panel.SetActive(false);
+    }
  
+    public void StartGame()
+    {
+        SceneManager.LoadScene("CharacterSelect");
+    }
+
+    public void ContinuePlay()
+    {
+        if(Variables.currentScene == null)
+            SceneManager.LoadScene("Stage1");
+
+        else
+            SceneManager.LoadScene(Variables.currentScene);
+    }
 }
