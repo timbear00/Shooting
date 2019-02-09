@@ -8,7 +8,7 @@ public class SceneChange : MonoBehaviour
 {
     public void Jack()
     {
-        SceneManager.LoadScene("GJ_test");
+        SceneManager.LoadScene("1stMap");
         Player.playerName = "Jack";
         Player.attackDamage = 10;
         Player.hp = 100;
@@ -16,7 +16,7 @@ public class SceneChange : MonoBehaviour
 
     public void Jessica()
     {
-        SceneManager.LoadScene("GJ_test");
+        SceneManager.LoadScene("1stMap");
         Player.playerName = "Jessica";
         Player.hp = 100;
 

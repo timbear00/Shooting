@@ -39,10 +39,13 @@ public class Enemy : MonoBehaviour
             Player.hp -= demage;
 
         }
+    }
 
-        else if (collision.gameObject.tag == "Bullet")
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Bullet")
         {
-            Debug.Log("hit!");
+            gameObject.GetComponent<SpriteRenderer>().color = new Color(1f, 0, 0);
             enemyHp -= Player.attackDamage;
         }
     }
