@@ -9,12 +9,14 @@ public class Player : MonoBehaviour
     public float attackDamage;
     public float attackSpeed;
 
+    public static bool playerdead;
     public static int hp;  
 
     // Start is called before the first frame update
     void Start()
     {
         hp = hpSetting;
+        playerdead = false;
     }
 
     void Update()
@@ -28,6 +30,7 @@ public class Player : MonoBehaviour
         if (hp < 1)
         {
             this.gameObject.active = false;
+            playerdead = true;
         }
     }
 

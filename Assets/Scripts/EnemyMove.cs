@@ -14,7 +14,7 @@ public class EnemyMove : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        if(!Player.playerdead)
         target = GameObject.FindGameObjectWithTag("player").GetComponent<Transform>();
     }
 
@@ -23,7 +23,9 @@ public class EnemyMove : MonoBehaviour
     {
         float step = speed * Time.deltaTime;
 
-        transform.position = Vector3.MoveTowards(transform.position, target.position, step);
+        if (!Player.playerdead)
+            transform.position = Vector3.MoveTowards(transform.position, target.position, step);
+
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
