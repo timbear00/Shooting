@@ -10,7 +10,13 @@ public class SceneChange : MonoBehaviour
     public void jack()
     {
         SceneManager.LoadScene("GJ_test");
-        name = "jack";
+        name = "Jack";
+    }
+
+    public void jessica()
+    {
+        SceneManager.LoadScene("GJ_test");
+        name = "Jessica";
     }
 
     // Start is called before the first frame update
