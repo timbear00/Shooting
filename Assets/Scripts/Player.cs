@@ -20,9 +20,10 @@ public class Player : MonoBehaviour
         playerHp.text = "HP : " + hp;
     }
 
-    private void FixedUpdate()
+    void Update()
     {
-        playerHp.text = "HP : " + hp;
+        Debug.Log(hp);
+        playerHp.text = "Hello";
         PlayerDie();
     }   
     

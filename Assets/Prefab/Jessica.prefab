@@ -143,7 +143,8 @@ MonoBehaviour:
   hpSetting: 100
   attackDamage: 10
   attackSpeed: 3
-  playerHp: {fileID: 0}
+  playerHp: {fileID: 3913477516022251137, guid: 6732b2aa05d094d4f81b08b2d680fb76,
+    type: 3}
 --- !u!114 &1928774948
 MonoBehaviour:
   m_ObjectHideFlags: 0
