@@ -13,7 +13,7 @@ public class SceneChange : MonoBehaviour
         name = "Jack";
     }
 
-    public void jessica()
+    public void Jessica()
     {
         SceneManager.LoadScene("GJ_test");
         name = "Jessica";

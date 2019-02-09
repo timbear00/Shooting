@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour
     public GameObject enemy1;
     public GameObject enemy2;
 
-    public Text HpText;
+    public Text nameText;
     public Transform canvas;
 
     public GameObject jack;
@@ -22,13 +22,16 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         up = true;
-        if(SceneChange.name == "jack")
+        if(SceneChange.name == "Jack")
         {
             Instantiate(jack, new Vector3(0, 0, 0), transform.rotation );
         }
+        else if(SceneChange.name == "Jessica")
+        {
+            Instantiate(jessica, new Vector3(0, 0, 0), transform.rotation);
+        }
 
-        Instantiate(HpText, canvas);
-
+        nameText.text = "Name : " + SceneChange.name;
     }
 
     // Update is called once per frame
