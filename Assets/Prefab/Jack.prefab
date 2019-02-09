@@ -15,9 +15,9 @@ GameObject:
   - component: {fileID: 701641635}
   - component: {fileID: 701641634}
   - component: {fileID: 701641633}
-  - component: {fileID: 701641632}
+  - component: {fileID: 8270626833079005466}
   m_Layer: 0
-  m_Name: Jack 1
+  m_Name: Jack
   m_TagString: player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -166,7 +166,7 @@ CapsuleCollider2D:
   m_Offset: {x: -0.30988216, y: -0.07508794}
   m_Size: {x: 2.0092518, y: 3.8501759}
   m_Direction: 0
---- !u!95 &701641632
+--- !u!95 &8270626833079005466
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 0

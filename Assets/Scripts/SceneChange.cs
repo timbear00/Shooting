@@ -53,6 +53,7 @@ public class SceneChange : MonoBehaviour
     public void StartGame()
     {
         SceneManager.LoadScene("CharacterSelect");
+        
     }
 
     public void ContinuePlay()

@@ -441,6 +441,7 @@ MonoBehaviour:
   clearPanel: {fileID: 625640354}
   MenuPanel: {fileID: 830153290}
   LastTime: 180
+  timeLeft: 1
 --- !u!4 &236094710
 Transform:
   m_ObjectHideFlags: 0

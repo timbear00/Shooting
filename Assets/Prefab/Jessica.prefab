@@ -15,9 +15,9 @@ GameObject:
   - component: {fileID: 7237488159106161014}
   - component: {fileID: 7061903222372811502}
   - component: {fileID: 5687984289536111313}
-  - component: {fileID: 6662022401611877313}
+  - component: {fileID: 2784233541319024252}
   m_Layer: 0
-  m_Name: Jessica 1
+  m_Name: Jessica
   m_TagString: player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -166,7 +166,7 @@ CapsuleCollider2D:
   m_Offset: {x: -0.23020864, y: -0.007258256}
   m_Size: {x: 2.351822, y: 3.6712074}
   m_Direction: 0
---- !u!95 &6662022401611877313
+--- !u!95 &2784233541319024252
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 0

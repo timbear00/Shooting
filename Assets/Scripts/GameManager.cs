@@ -24,24 +24,27 @@ public class GameManager : MonoBehaviour
 
     public float LastTime;
 
-    private float timeLeft = 1.0f;
+    public float timeLeft = 1.0f;
     private int spawnNum = 0;
     private GameObject player;
 
     // Start is called before the first frame update
     private void Awake()
     {
-        Player.playerClear = false;
-        Variables.currentScene = stageName;
 
         if (Player.playerName == "Jack")
         {
-            player = Instantiate<GameObject>(Jack);
+            player = Instantiate<GameObject>(Jack, new Vector3 (0,0,0), transform.rotation);
+            player.SetActive(true);
         }
         else
         {
-            player = Instantiate<GameObject>(Jessica);
+            player = Instantiate<GameObject>(Jessica, new Vector3(0, 0, 0), transform.rotation);
+            player.SetActive(true);
         }
+
+        Player.playerClear = false;
+        Variables.currentScene = stageName;
 
         nameText.text = "Name : " + Player.playerName;
         HealthBar.value = Player.hp;
@@ -96,10 +99,6 @@ public class GameManager : MonoBehaviour
             clearPanel.SetActive(true);
             Player.playerClear = true;
         }
-
-        else
-        {
-
-        }
+        
     }
 }

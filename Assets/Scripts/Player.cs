@@ -20,7 +20,6 @@ public class Player : MonoBehaviour
     {
         hp = hpSetting;
         playerdead = false;
-        gameObject.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>(playerName);
     }
 
     void Update()
@@ -33,7 +32,7 @@ public class Player : MonoBehaviour
     {
         if (hp < 1)
         {
-            gameObject.active = false;
+            gameObject.SetActive(false);
             playerdead = true;
         }
     }
