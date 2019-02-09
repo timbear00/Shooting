@@ -13,13 +13,19 @@ public class Enemy : MonoBehaviour
     public bool enemyDead;
     private bool enemyHit;
 
+    private Vector2 movementDirection;
+    private Vector2 movementPerSecond;
 
     // Start is called before the first frame update
     void Start()
     {
         enemyDead = false;
         enemyHit = false;
-        if (!Player.playerdead) 
+
+        movementDirection = new Vector2(Random.Range(-1.0f, 1.0f), Random.Range(-1.0f, 1.0f)).normalized;
+        movementPerSecond = movementDirection * speed;
+
+        if (!Player.playerdead && !Player.playerClear) 
             target = GameObject.FindGameObjectWithTag("player").GetComponent<Transform>();
     }
 
@@ -28,9 +34,13 @@ public class Enemy : MonoBehaviour
     {
         float step = speed * Time.deltaTime;
 
-        if (!Player.playerdead)
+        if (!Player.playerdead && !Player.playerClear)
         {
-            transform.position = Vector3.MoveTowards(transform.position, target.position, step);
+            if (Vector3.Distance(target.position, gameObject.transform.position) < 10f)
+                transform.position = Vector3.MoveTowards(transform.position, target.position, step);
+
+            else
+                transform.position = new Vector3(transform.position.x + (movementPerSecond.x * Time.deltaTime), transform.position.y + (movementPerSecond.y * Time.deltaTime), 0);
 
             if (gameObject.transform.position.x - target.transform.position.x > 0)
                 gameObject.GetComponent<SpriteRenderer>().flipX = true;
