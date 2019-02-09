@@ -8,14 +8,16 @@ public class GameManager : MonoBehaviour
     public GameObject enemy1;
     public GameObject enemy2;
 
+    public GameObject Jack;
+    public GameObject Jessica;
+
     public Text nameText;
     public Slider HealthBar;
     public Text hpText;
-
-    public GameObject jack;
-    public GameObject jessica;
+    public Text timeTable;
 
     private List<Enemy> enemies;
+    public float LastTime;
 
     float timeLeft = 1.0f;
     
@@ -24,16 +26,16 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        LastTime = 180;
+
         up = true;
-        /*
-        if(SceneChange.playerName == "Jack")
-        {
-            Instantiate(jack, new Vector3(0, 0, 0), transform.rotation );
+
+        if (Player.playerName == "Jack") {
+            GameObject player = Instantiate<GameObject>(Jack);
         }
-        else if(SceneChange.playerName == "Jessica")
-        {
-            Instantiate(jessica, new Vector3(0, 0, 0), transform.rotation);
-        }*/
+        else {
+            Instantiate<GameObject>(Jessica);
+        }
 
         nameText.text = "Name : " + Player.playerName;
         HealthBar.value = Player.hp;
@@ -41,8 +43,10 @@ public class GameManager : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
+        LastTime -= Time.deltaTime;
+        timeTable.text = "남은 시간 : " + LastTime.ToString();
 
         timeLeft -= Time.deltaTime;
         if( timeLeft <= 0 )
