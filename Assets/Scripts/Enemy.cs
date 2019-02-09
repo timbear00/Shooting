@@ -11,24 +11,31 @@ public class Enemy : MonoBehaviour
     public int demage;
 
     public bool enemyDead;
+    private bool enemyHit;
 
 
     // Start is called before the first frame update
     void Start()
     {
         enemyDead = false;
+        enemyHit = false;
         if (!Player.playerdead)
             target = GameObject.FindGameObjectWithTag("player").GetComponent<Transform>();
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         float step = speed * Time.deltaTime;
 
         if (!Player.playerdead)
             transform.position = Vector3.MoveTowards(transform.position, target.position, step);
 
+        if(enemyHit)
+        {
+            enemyHp -= Player.attackDamage;
+            enemyHit = false;
+        }
         Enemydead();
     }
 
@@ -37,7 +44,6 @@ public class Enemy : MonoBehaviour
         if (collision.gameObject.tag == "player")
         {
             Player.hp -= demage;
-
         }
     }
 
@@ -46,7 +52,7 @@ public class Enemy : MonoBehaviour
         if (collision.gameObject.tag == "Bullet")
         {
             gameObject.GetComponent<SpriteRenderer>().color = new Color(1f, 0, 0);
-            enemyHp -= Player.attackDamage;
+            enemyHit = true;
         }
     }
 
