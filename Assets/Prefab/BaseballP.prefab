@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 2058082570828355139}
   - component: {fileID: 5341118462334363815}
   - component: {fileID: 607032185852986446}
+  - component: {fileID: 4244377069254189602}
   m_Layer: 0
   m_Name: BaseballP
   m_TagString: enemy
@@ -172,3 +173,22 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.1779528, y: 3.1061325}
   m_EdgeRadius: 0
+--- !u!95 &4244377069254189602
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2455695298991714667}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: df9b0136ef1e0e54a950e56c9b04677d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
