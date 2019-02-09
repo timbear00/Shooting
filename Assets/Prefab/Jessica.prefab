@@ -40,7 +40,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1928774952}
   - component: {fileID: 1928774951}
-  - component: {fileID: 1928774950}
   - component: {fileID: 1928774949}
   - component: {fileID: 1928774948}
   - component: {fileID: 1928774947}
@@ -62,7 +61,7 @@ Transform:
   m_GameObject: {fileID: 1928774945}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.64, y: 0.26, z: 0}
-  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
+  m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
   m_Children:
   - {fileID: 1868348280}
   m_Father: {fileID: 0}
@@ -105,30 +104,17 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: bdc6ec6669b940e46a85ecf2509be841, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0f8f9c7f867700a44a099e6eb6bdb1f5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 12.8, y: 12.8}
+  m_Size: {x: 3.25, y: 3.63}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1928774950
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1928774945}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e3f1c1ead8898d4ea6f711235672f0e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 3
 --- !u!114 &1928774949
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -169,8 +155,8 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.21181047, y: 0}
-  m_Size: {x: 7.3563805, y: 10.370001}
+  m_Offset: {x: -0.2611937, y: 0.0000007947286}
+  m_Size: {x: 2.2206547, y: 3.6571565}
   m_Direction: 0
 --- !u!50 &1928774946
 Rigidbody2D:
@@ -206,6 +192,6 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.25489807, y: -0.05661726}
-  m_Size: {x: 7.2406387, y: 10.285336}
+  m_Offset: {x: -0.23020864, y: -0.007258256}
+  m_Size: {x: 2.351822, y: 3.6712074}
   m_Direction: 0
