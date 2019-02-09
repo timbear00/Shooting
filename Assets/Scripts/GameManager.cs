@@ -5,8 +5,8 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-    public GameObject enemy1;
-    public GameObject enemy2;
+    public List<GameObject> enemies;
+    public List<Transform> enemySpawnPos;
 
     public GameObject Jack;
     public GameObject Jessica;
@@ -16,24 +16,22 @@ public class GameManager : MonoBehaviour
     public Text hpText;
     public Text timeTable;
 
-    private List<Enemy> enemies;
     public float LastTime;
 
-    float timeLeft = 1.0f;
-    
-    bool up;
+    private float timeLeft = 1.0f;
+    private int spawnNum = 0;
 
     // Start is called before the first frame update
-    void Start()
+    private void Awake()
     {
         LastTime = 180;
 
-        up = true;
-
-        if (Player.playerName == "Jack") {
+        if (Player.playerName == "Jack")
+        {
             GameObject player = Instantiate<GameObject>(Jack);
         }
-        else {
+        else
+        {
             Instantiate<GameObject>(Jessica);
         }
 
@@ -51,19 +49,9 @@ public class GameManager : MonoBehaviour
         timeLeft -= Time.deltaTime;
         if( timeLeft <= 0 )
         {
-            if (up == true)
-            {
-                GameObject enemy = Instantiate(enemy1, new Vector3(0, 5, 0), enemy1.transform.rotation);
-                up = false;
-            }  
-            else if( up ==false)
-            {
-                GameObject enemy = Instantiate(enemy2, new Vector3(0, -5, 0), enemy2.transform.rotation);
+            Instantiate(enemies[Random.Range(0, enemies.Capacity)], enemySpawnPos[Random.Range(0, enemySpawnPos.Capacity)].position, Quaternion.identity);
 
-                up = true;
-            }
-            timeLeft = 3.0f;
-
+            timeLeft = 1.5f;
         }
 
         HealthBar.value = Player.hp;
