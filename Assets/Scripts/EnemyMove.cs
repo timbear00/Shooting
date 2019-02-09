@@ -31,6 +31,7 @@ public class EnemyMove : MonoBehaviour
         if( collision.gameObject.tag == "player" )
         {
             Player.hp -= demage;
+            
         }
     }
 

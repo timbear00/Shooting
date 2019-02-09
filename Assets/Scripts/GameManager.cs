@@ -1,11 +1,18 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
     public GameObject enemy1;
     public GameObject enemy2;
+
+    public Text HpText;
+    public Transform canvas;
+
+    public GameObject jack;
+    public GameObject jessica;
 
     float timeLeft = 1.0f;
 
@@ -15,11 +22,19 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         up = true;
+        if(SceneChange.name == "jack")
+        {
+            Instantiate(jack, new Vector3(0, 0, 0), transform.rotation );
+        }
+
+        Instantiate(HpText, canvas);
+
     }
 
     // Update is called once per frame
     void Update()
     {
+
         timeLeft -= Time.deltaTime;
         if( timeLeft < 0 )
         {
@@ -37,4 +52,5 @@ public class GameManager : MonoBehaviour
 
         }
     }
+    
 }
