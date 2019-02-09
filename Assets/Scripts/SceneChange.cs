@@ -8,7 +8,7 @@ public class SceneChange : MonoBehaviour
 {
     public void Jack()
     {
-        SceneManager.LoadScene("1stMap");
+        SceneManager.LoadScene("Stage1");
         Player.playerName = "Jack";
         Player.attackDamage = 20;
         Player.attackSpeed = 0.8f;
@@ -18,7 +18,7 @@ public class SceneChange : MonoBehaviour
 
     public void Jessica()
     {
-        SceneManager.LoadScene("1stMap");
+        SceneManager.LoadScene("Stage1");
         Player.playerName = "Jessica";
         Player.attackDamage = 10;
         Player.attackSpeed = 0.3f;
