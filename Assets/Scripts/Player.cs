@@ -6,7 +6,6 @@ using UnityEngine.UI;
 public class Player : MonoBehaviour
 {
     public static int hp = 100;
-
     public Text playerHp;
 
     // Start is called before the first frame update
