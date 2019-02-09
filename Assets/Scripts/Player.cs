@@ -9,6 +9,7 @@ public class Player : MonoBehaviour
     public static float attackDamage;
     public static float attackSpeed;
     public static string playerName;
+    public static float playerSpeed;
 
     public static bool playerdead;
     public static int hp;  
@@ -16,12 +17,9 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
         hp = hpSetting;
         playerdead = false;
         gameObject.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>(playerName);
-        
-
     }
 
     void Update()
@@ -34,7 +32,7 @@ public class Player : MonoBehaviour
     {
         if (hp < 1)
         {
-            this.gameObject.active = false;
+            gameObject.active = false;
             playerdead = true;
         }
     }
