@@ -9,21 +9,17 @@ public class Player : MonoBehaviour
     public float attackDamage;
     public float attackSpeed;
 
-    public static int hp;
-
-    public Text playerHp;  
+    public static int hp;  
 
     // Start is called before the first frame update
     void Start()
     {
         hp = hpSetting;
-        playerHp.text = "HP : " + hp;
     }
 
     void Update()
     {
         Debug.Log(hp);
-        playerHp.text = "Hello";
         PlayerDie();
     }   
     
