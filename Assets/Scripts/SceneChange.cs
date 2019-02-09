@@ -7,7 +7,7 @@ public class SceneChange : MonoBehaviour
 {
     public static string name;
 
-    public void jack()
+    public void Jack()
     {
         SceneManager.LoadScene("GJ_test");
         name = "jack";

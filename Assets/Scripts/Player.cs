@@ -5,18 +5,11 @@ using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
-<<<<<<< HEAD
     public static int hp = 100;
     public Text playerHp;
-=======
     public int hpSetting;
     public float attackDamage;
     public float attackSpeed;
-
-    public static int hp;
-
-    public Text playerHp;  
->>>>>>> 136f8467d7a6fc3f3a6b5100cc2e6bd6478ecf3f
 
     // Start is called before the first frame update
     void Start()
