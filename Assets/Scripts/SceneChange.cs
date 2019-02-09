@@ -2,23 +2,23 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class SceneChange : MonoBehaviour
 {
-    public static string name;
-
     public void Jack()
     {
         SceneManager.LoadScene("GJ_test");
-        name = "Jack";
+        Player.playerName = "Jack";
         Player.attackDamage = 10;
+        Player.hp = 100;
     }
 
     public void Jessica()
     {
         SceneManager.LoadScene("GJ_test");
-        name = "Jessica";
-        Player.attackDamage = 10;
+        Player.playerName = "Jessica";
+        Player.hp = 100;
 
     }
 
