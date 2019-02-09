@@ -22,16 +22,23 @@ public class bullet : MonoBehaviour
         StartCoroutine(DeleteBullet());
 
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
+    
     IEnumerator DeleteBullet()
     {
         yield return new WaitForSeconds(3);
         this.enabled = false;
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "enemy")
+            Destroy(gameObject);
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Boundary")
+            Destroy(gameObject);
+    }
+
 }

@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7856797191728959995}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.89, y: -1.18, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7856797192128318180}
@@ -40,11 +40,11 @@ GameObject:
   m_Component:
   - component: {fileID: 7856797192128318180}
   - component: {fileID: 7856797192128318183}
-  - component: {fileID: 7856797192128318182}
   - component: {fileID: 7856797192128318176}
   - component: {fileID: 7856797192128318181}
   - component: {fileID: 7856797192128318177}
   - component: {fileID: 7856797192128318179}
+  - component: {fileID: 2170949738027828529}
   m_Layer: 0
   m_Name: Jack
   m_TagString: player
@@ -61,7 +61,7 @@ Transform:
   m_GameObject: {fileID: 7856797192128318178}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.64, y: 0.26, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 0.1}
+  m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
   m_Children:
   - {fileID: 7856797191728959992}
   m_Father: {fileID: 0}
@@ -104,30 +104,17 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: f86eb00d3813f384c80de9b6a4df83a6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 58829da65b882704ea2a6626599828eb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 7.78, y: 10.37}
+  m_Size: {x: 3.23, y: 3.7}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &7856797192128318182
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7856797192128318178}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e3f1c1ead8898d4ea6f711235672f0e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 3
 --- !u!114 &7856797192128318176
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -165,11 +152,11 @@ CapsuleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.21181047, y: 0}
-  m_Size: {x: 7.3563805, y: 10.370001}
+  m_Offset: {x: -0.2897326, y: -0.05293727}
+  m_Size: {x: 2.0057335, y: 4.033239}
   m_Direction: 0
 --- !u!50 &7856797192128318179
 Rigidbody2D:
@@ -192,3 +179,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!70 &2170949738027828529
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7856797192128318178}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.30988216, y: -0.07508794}
+  m_Size: {x: 2.0092518, y: 3.8501759}
+  m_Direction: 0

@@ -2,58 +2,91 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+
 
 public class GameManager : MonoBehaviour
 {
-    public GameObject enemy1;
-    public GameObject enemy2;
+    public List<GameObject> enemies;
+    public List<Transform> enemySpawnPos;
+
+    public GameObject Jack;
+    public GameObject Jessica;
 
     public Text nameText;
     public Slider HealthBar;
     public Text hpText;
+    public Text timeTable;
 
-    public GameObject jack;
-    public GameObject jessica;
+    public GameObject clearPanel;
 
-    private List<Enemy> enemies;
+    public float LastTime;
 
-    float timeLeft = 1.0f;
-    
-    bool up;
+    private float timeLeft = 1.0f;
+    private int spawnNum = 0;
+    private GameObject player;
 
     // Start is called before the first frame update
-    void Start()
+    private void Awake()
     {
-        up = true;
+        LastTime = 10;
+        Player.playerClear = false;
+
+        if (Player.playerName == "Jack")
+        {
+            player = Instantiate<GameObject>(Jack);
+        }
+        else
+        {
+            player = Instantiate<GameObject>(Jessica);
+        }
+
         nameText.text = "Name : " + Player.playerName;
         HealthBar.value = Player.hp;
         hpText.text = Player.hp + "/100";
+
+        clearPanel.SetActive(false);
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
+
+        LastTime -= Time.deltaTime;
+
+        if(LastTime > 0)
+            timeTable.text = "남은 시간 : " + LastTime.ToString();
+
+        else
+            timeTable.text = "남은 시간 : " + 0;
 
         timeLeft -= Time.deltaTime;
         if( timeLeft <= 0 )
         {
-            if (up == true)
-            {
-                GameObject enemy = Instantiate(enemy1, new Vector3(0, 5, 0), enemy1.transform.rotation);
-                up = false;
-            }  
-            else if( up ==false)
-            {
-                GameObject enemy = Instantiate(enemy2, new Vector3(0, -5, 0), enemy2.transform.rotation);
+            Instantiate(enemies[Random.Range(0, enemies.Capacity)], enemySpawnPos[Random.Range(0, enemySpawnPos.Capacity)].position, Quaternion.identity);
 
-                up = true;
-            }
-            timeLeft = 3.0f;
-
+            timeLeft = 1.5f;
         }
 
         HealthBar.value = Player.hp;
         hpText.text = Player.hp + "/100";
+
+        Clear();
     }
     
+    void GameOver()
+    {
+
+    }
+
+    void Clear()
+    {
+        if (LastTime <= 0)
+        {
+            player.SetActive(false);
+            clearPanel.SetActive(true);
+            Player.playerClear = true;
+        }
+            
+    }
 }

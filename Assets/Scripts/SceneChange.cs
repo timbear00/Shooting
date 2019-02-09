@@ -8,29 +8,38 @@ public class SceneChange : MonoBehaviour
 {
     public void Jack()
     {
-        SceneManager.LoadScene("GJ_test");
+        SceneManager.LoadScene("1stMap");
         Player.playerName = "Jack";
-        Player.attackDamage = 10;
+        Player.attackDamage = 20;
+        Player.attackSpeed = 0.8f;
+        Player.playerSpeed = 2;
         Player.hp = 100;
     }
 
     public void Jessica()
     {
-        SceneManager.LoadScene("GJ_test");
+        SceneManager.LoadScene("1stMap");
         Player.playerName = "Jessica";
+        Player.attackDamage = 10;
+        Player.attackSpeed = 0.3f;
+        Player.playerSpeed = 3;
         Player.hp = 100;
 
     }
 
-    // Start is called before the first frame update
-    void Start()
+    public void GoToStage2()
     {
-        
+        SceneManager.LoadScene("Stage2");
     }
 
-    // Update is called once per frame
-    void Update()
+    public void GoToBossStage()
     {
-        
+        SceneManager.LoadScene("Boss");
     }
+
+    public void GoToMain()
+    {
+        SceneManager.LoadScene("Main");
+    }
+ 
 }
