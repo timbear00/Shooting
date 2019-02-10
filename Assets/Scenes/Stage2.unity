@@ -929,7 +929,7 @@ MonoBehaviour:
   stageName: Stage2
   clearPanel: {fileID: 1500403463}
   MenuPanel: {fileID: 1020166904}
-  LastTime: 180
+  LastTime: 60
   timeLeft: 1
 --- !u!4 &734678202
 Transform:
@@ -1731,6 +1731,12 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 4221009279016665534, guid: 2a9c9ab44d018c7408c4768f829df902,
+        type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: c11afea44c3804e48a48857c570653cd,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2a9c9ab44d018c7408c4768f829df902, type: 3}
 --- !u!224 &1431723641 stripped

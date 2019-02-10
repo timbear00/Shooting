@@ -76,6 +76,7 @@ public class GameManager : MonoBehaviour
         if( timeLeft <= 0 )
         {
             Instantiate(enemies[Random.Range(0, enemies.Capacity)], enemySpawnPos[Random.Range(0, enemySpawnPos.Capacity)].position, Quaternion.identity);
+            Instantiate(enemies[Random.Range(0, enemies.Capacity)], enemySpawnPos[Random.Range(0, enemySpawnPos.Capacity)].position, Quaternion.identity);
 
             timeLeft = 1.5f;
         }
@@ -100,5 +101,10 @@ public class GameManager : MonoBehaviour
             Player.playerClear = true;
         }
         
+        else if(stageName == "Boss" && Variables.GameClear)
+        {
+            SceneManager.LoadScene("Ending");
+            player.SetActive(false);
+        }
     }
 }

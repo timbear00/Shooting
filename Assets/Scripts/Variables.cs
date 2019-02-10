@@ -6,6 +6,7 @@ public class Variables : MonoBehaviour
 {
 
     public static string currentScene;
+    public static bool GameClear;
 
     // Start is called before the first frame update
     void Start()

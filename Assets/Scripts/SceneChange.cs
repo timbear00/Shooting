@@ -53,13 +53,17 @@ public class SceneChange : MonoBehaviour
     public void StartGame()
     {
         SceneManager.LoadScene("CharacterSelect");
+        Variables.GameClear = false;
         
     }
 
     public void ContinuePlay()
     {
         if(Variables.currentScene == null)
-            SceneManager.LoadScene("Stage1");
+        {
+            Variables.GameClear = false;
+            SceneManager.LoadScene("CharacterSelect");
+        }
 
         else
             SceneManager.LoadScene(Variables.currentScene);

@@ -1486,6 +1486,12 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 4221009279016665534, guid: 2a9c9ab44d018c7408c4768f829df902,
+        type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: c11afea44c3804e48a48857c570653cd,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2a9c9ab44d018c7408c4768f829df902, type: 3}
 --- !u!224 &1151682249 stripped
@@ -1541,8 +1547,8 @@ MonoBehaviour:
   - {fileID: 8607519628051174185, guid: d176c7571afa78d45a2475af1d7cd84c, type: 3}
   - {fileID: 2455695298991714667, guid: fb32549c22366364c8c5595f7bd7fe4f, type: 3}
   enemySpawnPos:
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 398109902}
+  - {fileID: 1644747773}
   Jack: {fileID: 701641631, guid: b9bcd8fc42bea9d44a4762f9f97edfe4, type: 3}
   Jessica: {fileID: 9000411556510935896, guid: c58a3f059c0fe0142ba6d0d832fb7e57, type: 3}
   nameText: {fileID: 399651498}
@@ -1552,7 +1558,7 @@ MonoBehaviour:
   stageName: Boss
   clearPanel: {fileID: 1695843992}
   MenuPanel: {fileID: 1054157923}
-  LastTime: 300
+  LastTime: 80
   timeLeft: 4
 --- !u!4 &1293410363
 Transform:
