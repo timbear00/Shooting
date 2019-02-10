@@ -29,6 +29,8 @@ public class Boss : MonoBehaviour
 
         if (!Player.playerdead && !Player.playerClear)
         {
+            transform.position = Vector3.MoveTowards(transform.position, target.position, step);
+
             if (gameObject.transform.position.x - target.transform.position.x > 0)
                 gameObject.GetComponent<SpriteRenderer>().flipX = true;
         }
@@ -61,8 +63,10 @@ public class Boss : MonoBehaviour
     void BossDead()
     {
         if (bossHp <= 0)
+        {
             Variables.GameClear = true;
-
-        Destroy(gameObject);
+            Destroy(gameObject);
+        }
+            
     }
 }
