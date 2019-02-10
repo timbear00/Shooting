@@ -28,7 +28,10 @@ public class GameManager : MonoBehaviour
     private int spawnNum = 0;
     private GameObject player;
 
-    public GameObject item;
+    public GameObject powerUpItem;
+    public GameObject hpItem;
+    public GameObject shieldItem;
+
     private float itemTimeLeft;
     private int itemType;
     public static int itemCount;
@@ -37,7 +40,7 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
         itemCount = 0;
-        itemTimeLeft = Random.Range(5.0f, 10.0f);
+        itemTimeLeft = Random.Range(3.0f, 5.0f);
         Debug.Log(itemTimeLeft);
 
         if (Player.playerName == "Jack")
@@ -92,26 +95,24 @@ public class GameManager : MonoBehaviour
         #region item spawn
 
         itemTimeLeft -= Time.deltaTime;
-        if (itemTimeLeft <= 0 && itemCount <= 5)
+        if (itemTimeLeft <= 0 && itemCount <= 10)
         {
-            Instantiate(item, new Vector3(Random.Range(-25.0f, 25.0f), Random.Range(-13.0f, 13.0f), 0), Quaternion.identity);
-            itemCount++;
-
             itemType = Random.Range(0, 3);
             if (itemType == 0)
             {
-                Item.itemName = "power";
+                Instantiate(powerUpItem, new Vector3(Random.Range(-20.0f, 20.0f), Random.Range(-10.0f, 10.0f), 0), Quaternion.identity);
             }
             else if (itemType == 1)
             {
-                Item.itemName = "hp";
+                Instantiate(hpItem, new Vector3(Random.Range(-20.0f, 20.0f), Random.Range(-10.0f, 10.0f), 0), Quaternion.identity);
             }
             else if (itemType == 2)
             {
-                Item.itemName = "shield";
+                Instantiate(shieldItem, new Vector3(Random.Range(-20.0f, 20.0f), Random.Range(-10.0f, 10.0f), 0), Quaternion.identity);
             }
+            itemCount++;
 
-            itemTimeLeft = Random.Range(5.0f, 10.0f);
+            itemTimeLeft = Random.Range(3.0f, 5.0f);
             //Debug.Log("Item type : " + Item.itemName + ", Item Count : " + itemCount+", TimeLeft : "+itemTimeLeft);
         }
 

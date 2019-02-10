@@ -59,7 +59,14 @@ public class Enemy : MonoBehaviour
     {
         if (collision.gameObject.tag == "player")
         {
-            Player.hp -= demage;
+            if (Player.shield)
+            {
+                Player.shield = false;
+            }
+            else
+            {
+                Player.hp -= demage;
+            }
         }
     }
 

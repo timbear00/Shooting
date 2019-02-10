@@ -931,6 +931,11 @@ MonoBehaviour:
   MenuPanel: {fileID: 1020166904}
   LastTime: 60
   timeLeft: 1
+  powerUpItem: {fileID: 3365130854125858713, guid: 2f327ea0a7e4e87428f0bac3b636fc48,
+    type: 3}
+  hpItem: {fileID: 7584172872721519461, guid: 781cf2e70f1c08d4899a84ea89553e95, type: 3}
+  shieldItem: {fileID: 7876781943374010779, guid: 6cbf1899c9b7b4a47a277f3faf83e84c,
+    type: 3}
 --- !u!4 &734678202
 Transform:
   m_ObjectHideFlags: 0
@@ -1175,6 +1180,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2163617245917151316, guid: b1aa0c57581dff640b87a6a0e9a39c30,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2163617245917151316, guid: b1aa0c57581dff640b87a6a0e9a39c30,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: -480
+      objectReference: {fileID: 0}
+    - target: {fileID: 2163617244945747116, guid: b1aa0c57581dff640b87a6a0e9a39c30,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -120
+      objectReference: {fileID: 0}
+    - target: {fileID: 2163617244945747116, guid: b1aa0c57581dff640b87a6a0e9a39c30,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: -480
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b1aa0c57581dff640b87a6a0e9a39c30, type: 3}
@@ -1843,6 +1868,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Clear Panel
+      objectReference: {fileID: 0}
+    - target: {fileID: 3181784004875943442, guid: 135b4cfa3eddf7643a3d891f2a71ebad,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3181784004875943443, guid: 135b4cfa3eddf7643a3d891f2a71ebad,
         type: 3}

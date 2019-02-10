@@ -787,6 +787,16 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: -4.6100006
       objectReference: {fileID: 0}
+    - target: {fileID: 8073503881312720438, guid: a62f6f938b8ce31489f483a80175c269,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 28.100098
+      objectReference: {fileID: 0}
+    - target: {fileID: 8073503881312720438, guid: a62f6f938b8ce31489f483a80175c269,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 44.900024
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a62f6f938b8ce31489f483a80175c269, type: 3}
 --- !u!224 &399651495 stripped
@@ -1560,6 +1570,11 @@ MonoBehaviour:
   MenuPanel: {fileID: 1054157923}
   LastTime: 80
   timeLeft: 4
+  powerUpItem: {fileID: 3365130854125858713, guid: 2f327ea0a7e4e87428f0bac3b636fc48,
+    type: 3}
+  hpItem: {fileID: 7584172872721519461, guid: 781cf2e70f1c08d4899a84ea89553e95, type: 3}
+  shieldItem: {fileID: 7876781943374010779, guid: 6cbf1899c9b7b4a47a277f3faf83e84c,
+    type: 3}
 --- !u!4 &1293410363
 Transform:
   m_ObjectHideFlags: 0
