@@ -49,6 +49,7 @@ public class Enemy : MonoBehaviour
         if (enemyHit)
         {
             enemyHp -= Player.attackDamage;
+            if (enemyHp <= 20) speed *= 2;
             enemyHit = false;
         }
         Enemydead();
@@ -67,6 +68,8 @@ public class Enemy : MonoBehaviour
         if (collision.gameObject.tag == "Bullet")
         {
             gameObject.GetComponent<SpriteRenderer>().color = new Color(1f, 0, 0);
+            
+
             enemyHit = true;
         }
     }

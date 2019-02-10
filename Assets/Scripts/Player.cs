@@ -13,13 +13,18 @@ public class Player : MonoBehaviour
 
     public static bool playerdead;
     public static bool playerClear;
-    public static int hp;  
+    public static int hp;
+
+    public static bool shield;
+    public static bool powerUp;
 
     // Start is called before the first frame update
     void Start()
     {
         hp = hpSetting;
         playerdead = false;
+        shield = false;
+        powerUp = false;
     }
 
     void Update()
