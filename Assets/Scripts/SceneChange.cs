@@ -42,6 +42,7 @@ public class SceneChange : MonoBehaviour
     public void GoToMain()
     {
         SceneManager.LoadScene("Main");
+        Time.timeScale = 1;
     }
 
     public void ContinueGame()

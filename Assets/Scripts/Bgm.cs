@@ -11,6 +11,7 @@ public class Bgm : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
+
         if (changeMusic)
         {
             var go = GameObject.Find("StartBGM"); //Finds the game object called Game Music, if it goes by a different name, change this.
