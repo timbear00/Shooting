@@ -1343,7 +1343,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.8
-  enemyHp: 500
+  enemyHp: 300
   demage: 30
   enemyDead: 0
 --- !u!212 &1073187687
