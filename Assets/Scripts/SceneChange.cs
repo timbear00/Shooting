@@ -68,4 +68,15 @@ public class SceneChange : MonoBehaviour
         else
             SceneManager.LoadScene(Variables.currentScene);
     }
+
+    public void HowToPlay()
+    {
+        SceneManager.LoadScene("HowToPlay");
+
+        Player.playerName = "Jack";
+        Player.attackDamage = 20;
+        Player.attackSpeed = 0.8f;
+        Player.playerSpeed = 2;
+        Player.hp = 100;
+    }
 }
