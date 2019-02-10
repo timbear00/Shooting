@@ -142,7 +142,7 @@ public class GameManager : MonoBehaviour
 
     void Clear()
     {
-        if (LastTime <= 0 && stageName != "Boss")
+        if (LastTime <= 0 && stageName != "Boss" && !Player.playerdead)
         {
             player.SetActive(false);
             clearPanel.SetActive(true);
