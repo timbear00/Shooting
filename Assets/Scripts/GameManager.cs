@@ -63,6 +63,7 @@ public class GameManager : MonoBehaviour
 
         clearPanel.SetActive(false);
         MenuPanel.SetActive(false);
+
     }
 
     // Update is called once per frame
