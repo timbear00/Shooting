@@ -123,16 +123,27 @@ public class GameManager : MonoBehaviour
         hpText.text = Player.hp + "/100";
 
         Clear();
+        GameOver();
     }
     
     void GameOver()
     {
+        if(Player.playerdead)
+        {
+            player.SetActive(false);
+            SceneManager.LoadScene("BadEnding");
+        }
 
+        else if(stageName == "Boss" && LastTime <= 0)
+        {
+            player.SetActive(false);
+            SceneManager.LoadScene("BadEnding");
+        }
     }
 
     void Clear()
     {
-        if (LastTime <= 0 && stageName != "Boss")
+        if (LastTime <= 0 && stageName != "Boss" && !Player.playerdead)
         {
             player.SetActive(false);
             clearPanel.SetActive(true);

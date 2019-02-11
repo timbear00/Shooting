@@ -807,7 +807,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 69, y: 0}
+  m_AnchoredPosition: {x: 51, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &677189904
@@ -831,7 +831,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: c11afea44c3804e48a48857c570653cd, type: 3}
+    m_Font: {fileID: 12800000, guid: ff9107f60e0945c438919c048f24bc36, type: 3}
     m_FontSize: 50
     m_FontStyle: 0
     m_BestFit: 0
@@ -1184,22 +1184,22 @@ PrefabInstance:
     - target: {fileID: 2163617245917151316, guid: b1aa0c57581dff640b87a6a0e9a39c30,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 10
+      value: 34.4
       objectReference: {fileID: 0}
     - target: {fileID: 2163617245917151316, guid: b1aa0c57581dff640b87a6a0e9a39c30,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: -480
+      value: -431.3
       objectReference: {fileID: 0}
     - target: {fileID: 2163617244945747116, guid: b1aa0c57581dff640b87a6a0e9a39c30,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -120
+      value: -91.6
       objectReference: {fileID: 0}
     - target: {fileID: 2163617244945747116, guid: b1aa0c57581dff640b87a6a0e9a39c30,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: -480
+      value: -423.2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b1aa0c57581dff640b87a6a0e9a39c30, type: 3}
@@ -1229,6 +1229,7 @@ GameObject:
   - component: {fileID: 1035707595}
   - component: {fileID: 1035707594}
   - component: {fileID: 1035707593}
+  - component: {fileID: 1035707599}
   m_Layer: 0
   m_Name: BaseballField
   m_TagString: Boundary
@@ -1402,6 +1403,32 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1035707599
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1035707592}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 19.2, y: 10.8}
+    newSize: {x: 19.2, y: 10.8}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 19.2, y: 10.8}
+  m_EdgeRadius: 0
 --- !u!1001 &1118503035
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1760,7 +1787,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_FontData.m_Font
       value: 
-      objectReference: {fileID: 12800000, guid: c11afea44c3804e48a48857c570653cd,
+      objectReference: {fileID: 12800000, guid: ff9107f60e0945c438919c048f24bc36,
         type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2a9c9ab44d018c7408c4768f829df902, type: 3}
@@ -2017,7 +2044,7 @@ PrefabInstance:
     - target: {fileID: 3181784004292131536, guid: 135b4cfa3eddf7643a3d891f2a71ebad,
         type: 3}
       propertyPath: m_Text
-      value: '  o   ?'
+      value: '  o      ?'
       objectReference: {fileID: 0}
     - target: {fileID: 3181784004292131536, guid: 135b4cfa3eddf7643a3d891f2a71ebad,
         type: 3}

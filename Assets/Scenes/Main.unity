@@ -410,8 +410,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -717.47003, y: -297.2}
-  m_SizeDelta: {x: -1495.4, y: -952.7}
+  m_AnchoredPosition: {x: -676.14, y: -271.9}
+  m_SizeDelta: {x: -1578.1, y: -902}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &767060432
 MonoBehaviour:
@@ -516,6 +516,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 767060430}
   m_CullTransparentMesh: 0
+--- !u!1 &1104148881
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1104148883}
+  - component: {fileID: 1104148882}
+  m_Layer: 0
+  m_Name: Bgm
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1104148882
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1104148881}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 913f239b3f8cf524e8bf3d518bc65df8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  newMusic: {fileID: 8300000, guid: 46e785aabbe06354abaf1cfc3bd0bc72, type: 3}
+  changeMusic: 1
+--- !u!4 &1104148883
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1104148881}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.27916437, y: 1.0699041, z: 0.25546876}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1236984088
 GameObject:
   m_ObjectHideFlags: 0
@@ -594,6 +639,7 @@ GameObject:
   - component: {fileID: 1369667346}
   - component: {fileID: 1369667345}
   - component: {fileID: 1369667344}
+  - component: {fileID: 1369667347}
   m_Layer: 5
   m_Name: How To play
   m_TagString: Untagged
@@ -617,8 +663,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -572.6, y: -466.63}
-  m_SizeDelta: {x: -1205.7, y: -933.25}
+  m_AnchoredPosition: {x: -554.8, y: -431.9}
+  m_SizeDelta: {x: -1316.5, y: -893.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1369667344
 MonoBehaviour:
@@ -659,7 +705,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1369667345}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1369667347}
+        m_MethodName: HowToPlay
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1369667345
@@ -699,6 +756,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1369667342}
   m_CullTransparentMesh: 0
+--- !u!114 &1369667347
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1369667342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be2cf457aa1c0a4479e9c7c0aa35ae28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  panel: {fileID: 0}
 --- !u!1 &2061069291
 GameObject:
   m_ObjectHideFlags: 0
@@ -735,8 +805,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -769.4101, y: -154.59998}
-  m_SizeDelta: {x: -1599.3, y: -958.4}
+  m_AnchoredPosition: {x: -745.9, y: -130.2}
+  m_SizeDelta: {x: -1717.6, y: -909.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2061069293
 MonoBehaviour:

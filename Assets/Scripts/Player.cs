@@ -28,6 +28,7 @@ public class Player : MonoBehaviour
         playerdead = false;
         shield = false;
         powerUp = false;
+
     }
 
     void FixedUpdate()
